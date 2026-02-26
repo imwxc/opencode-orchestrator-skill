@@ -1,0 +1,52 @@
+name: opencode-orchestrator
+version: 1.0.0
+description: OpenCode Agent 编排技能 - 任务分解、Agent 路由与状态管理
+author: imwxc
+repository: https://github.com/imwxc/opencode-orchestrator-skill
+license: MIT
+
+# ClawHub 发布配置
+publish:
+  registry: clawhub
+  visibility: public
+  categories:
+    - orchestration
+    - devtools
+    - automation
+
+# 技能触发关键词
+triggers:
+  - opencode
+  - 编排
+  - orchestrator
+  - 任务分解
+  - agent 路由
+
+# 依赖
+dependencies:
+  - opencode-cli >= 1.0.0
+  - jq (optional)
+
+# 支持的项目类型
+supported_projects:
+  - node
+  - python
+  - rust
+  - go
+  - typescript
+  - generic
+
+# 技能能力
+capabilities:
+  - task_decomposition
+  - agent_routing
+  - state_management
+  - background_task_management
+  - error_recovery
+
+# 配置选项
+config:
+  default_timeout: 300000  # 5 分钟
+  max_retries: 3
+  poll_interval: 2000      # 2 秒
+  log_level: info
